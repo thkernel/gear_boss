@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: technical_visits
+#
+#  id                   :bigint           not null, primary key
+#  gear_id              :bigint
+#  start_date           :datetime
+#  end_date             :datetime
+#  reference            :string
+#  pre_tax_amount       :float
+#  vat_rate             :float
+#  amount_including_tax :float
+#  status               :string
+#  user_id              :bigint
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: MyString
+  user: one
+
+two:
+  uid: MyString
+  user: two

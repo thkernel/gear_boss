@@ -1,0 +1,18 @@
+<% @gear_types.each do |gear_type| %>
+  <tr>
+    
+    <td><%= gear_type.name %></td>
+   <td>
+        <div class="action-buttons">
+            <%= link_to raw('<i class="fa fa-pencil" aria-hidden="true"></i>
+'),  edit_gear_type_path(gear_type), title: "Modifier", remote: true %>
+
+
+
+
+<%= link_to raw('<i class="fa fa-trash-o" aria-hidden="true"></i>
+'), gear_type_delete_path(gear_type), remote: true, title: "Supprimer", class: "delete" %>
+</div>
+</td>
+  </tr>
+<% end %>

@@ -1,0 +1,65 @@
+<%= form_with(model: gear, local: false) do |form| %>
+  
+<div class="modal-body">
+    <ul class="errors">
+    </ul>
+  
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <%= form.label :gear_type_id, "Type", class: "required" %>
+          <%= form.collection_select :gear_type_id, @gear_types, :id, :name, {prompt: "Sélectionner"}, class: "form-control", style: "width: 100%;",  required: true %> 
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="form-group">
+          <%= form.label :name, "Nom", class: "required" %>
+          <%= form.text_field :name, class: "form-control", placeholder: "Nom", required: true %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :park_id, "Parc" , class: "required" %>
+          <%= form.collection_select :park_id, @parks, :id, :name, {prompt: "Sélectionner"}, class: "form-control", style: "width: 100%;",  required: true %> 
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :brand, "Marque" %>
+          <%= form.text_field :brand, class: "form-control" , placeholder: "Marque" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :model, "Modèle" %>
+          <%= form.text_field :model, class: "form-control", placeholder: "Année de fabrication" %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :manufacture_year, "Année de fabrication" %>
+          <%= form.text_field :manufacture_year, class: "form-control", placeholder: "Année de fabrication" %>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= form.label :description %>
+          <%= form.text_area :description, class: "form-control", placeholder: "Description" %>
+        </div>
+      </div>
+    </div>
+
+  
+
+ </div><!-- modal body -->
+  <div class="modal-footer">
+    <%= link_to "Annuler", "#", class: "btn btn-secondary tx-mont tx-medium tx-11 tx-uppercase pd-y-12 pd-x-25 tx-spacing-1", data: {dismiss: "modal"} %>
+    <%= form.submit "Enregistrer", class: "btn btn-primary tx-mont tx-medium tx-11 tx-uppercase pd-y-12 pd-x-25 tx-spacing-1",  "data-loading-text"=>"Loading...", autocomplete: "off" %>
+  </div>
+<% end %>

@@ -1,0 +1,130 @@
+<!-- ########## START: LEFT PANEL ########## -->
+
+      <ul class="br-sideleft-menu">
+       <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-home tx-20"></i> <span class="menu-item-label">Tableau de bord</span>'), dashboard_path, class: "br-menu-link #{current? "active", dashboard_path}" %>
+        </li><!-- br-menu-item -->
+
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Engins</span>'), gears_path, class: "br-menu-link #{current? "active", gears_path}" %>
+
+        </li><!-- br-menu-item -->
+        
+
+        </li><!-- br-menu-item -->
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Parcs</span>'), parks_path, class: "br-menu-link #{current? "active", parks_path}" %>
+        </li><!-- br-menu-item -->
+
+
+
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Reservations</span>'), bookings_path, class: "br-menu-link #{current? "active", bookings_path}" %>
+        </li><!-- br-menu-item -->
+
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Locations</span>'), rentals_path, class: "br-menu-link #{current? "active", rentals_path}" %>
+        </li><!-- br-menu-item -->
+
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Factures</span>'), orders_path, class: "br-menu-link #{current? "active", orders_path}" %>
+        </li><!-- br-menu-item -->
+
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Devis</span>'), parks_path, class: "br-menu-link #{current? "active", parks_path}" %>
+        </li><!-- br-menu-item -->
+
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Dépenses</span>'), expenses_path, class: "br-menu-link #{current? "active", expenses_path}" %>
+        </li><!-- br-menu-item -->
+
+        <li class="br-menu-item">
+          <%= link_to  raw('<i class="fa fa-list-alt tx-20" aria-hidden="true"></i> <span class="menu-item-label">Chauffeurs</span>'), drivers_path, class: "br-menu-link #{current? "active", drivers_path}" %>
+        </li><!-- br-menu-item -->
+
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="fa fa-cog tx-20"></i>
+            <span class="menu-item-label">Suivi</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item">
+                <%= link_to  "Maintenances/Réparations", technical_visits_path, class: "sub-link #{current? "active", technical_visits_path}" %>
+            </li>
+            <li class="sub-item">
+                <%= link_to  "Visites techniques", technical_visits_path, class: "sub-link #{current? "active", technical_visits_path}" %>
+            </li>
+          </ul>
+        </li>
+
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="fa fa-cog tx-20"></i>
+            <span class="menu-item-label">Tiers</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            <li class="sub-item">
+                <%= link_to  "Clients", customers_path, class: "sub-link #{current? "active", customers_path}" %>
+            </li>
+            <li class="sub-item">
+                <%= link_to  "Fournisseurs", technical_visits_path, class: "sub-link #{current? "active", technical_visits_path}" %>
+            </li>
+          </ul>
+        </li>
+        
+        
+         
+      
+        
+         
+
+
+        <li class="br-menu-item">
+          <a href="#" class="br-menu-link with-sub">
+            <i class="fa fa-cog tx-20"></i>
+            <span class="menu-item-label">Paramètres</span>
+          </a><!-- br-menu-link -->
+          <ul class="br-menu-sub">
+            
+          
+            <li class="sub-item">
+                <%= link_to  "Utilisateurs", all_users_path, class: "sub-link #{current? "active", all_users_path}" %>
+            </li>
+            <li class="sub-item">
+                <%= link_to  "Rôles", roles_path, class: "sub-link #{current? "active", roles_path}" %>
+            </li>
+
+           
+            <li class="sub-item">
+                <%= link_to  "Droits d'accès", permissions_path, class: "sub-link #{current? "active", permissions_path}" %>
+            </li>
+            <li class="sub-item">
+                <%= link_to  "Types d'engin", gear_types_path, class: "sub-link #{current? "active", gear_types_path}" %>
+            </li>
+            <li class="sub-item">
+                <%= link_to  "Localités", locations_path, class: "sub-link #{current? "active", locations_path}" %>
+            </li>
+           
+             
+
+           
+          
+
+
+          
+
+
+
+          </ul>
+        </li>
+
+
+       
+      </ul><!-- br-sideleft-menu -->
+
+      
+       
+        
+      </div><!-- info-list -->
+
+    <!-- ########## END: LEFT PANEL ########## -->

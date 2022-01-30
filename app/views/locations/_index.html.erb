@@ -1,0 +1,18 @@
+<% @locations.each do |location| %>
+  <tr>
+    
+    <td><%= location.name %></td>
+    <td>
+        <div class="action-buttons">
+            <%= link_to raw('<i class="fa fa-pencil" aria-hidden="true"></i>
+'),  edit_location_path(location), title: "Modifier", remote: true %>
+
+
+
+
+<%= link_to raw('<i class="fa fa-trash-o" aria-hidden="true"></i>
+'), location_delete_path(location), remote: true, title: "Supprimer", class: "delete" %>
+</div>
+</td>
+  </tr>
+<% end %>

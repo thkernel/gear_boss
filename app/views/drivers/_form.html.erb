@@ -1,0 +1,73 @@
+<%= form_with(model: driver, local: false) do |form| %>
+  <div class="modal-body">
+    <ul class="errors">
+    </ul>
+
+  
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <%= form.label :first_name, "Prénom", class: "require" %>
+          <%= form.text_field :first_name, class: "form-control" , placeholder: "Prénom", required: true %>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <%= form.label :last_name, "Nom", class: "required" %>
+          <%= form.text_field :last_name, class: "form-control" , placeholder: "Nom", required: true %>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <%= form.label :civility, "Genre", class: "required" %>
+          <%= form.select :civility , CIVILITIES, {prompt: "Sélectionner"}, class: "form-control", style: "width: 100%" , required: true %>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+
+        <div class="form-group">
+          <%= form.label :address, "Adresse" %>
+          <%= form.text_field :last_name, class: "form-control" , placeholder: "Adresse" %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :phone, "Téléphone" %>
+          <%= form.text_field :phone, class: "form-control" , placeholder: "Téléphone" %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :city, "Ville", class: "required" %>
+          <%= form.text_field :city, class: "form-control" , placeholder: "Ville", required: true %>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= form.label :email, "Email" %>
+          <%= form.text_field :email, class: "form-control" , placeholder: "Email" %>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= form.label :description %>
+          <%= form.text_area :description, class: "form-control" , placeholder: "Description" %>
+        </div>
+      </div>
+    </div>
+
+  
+
+  </div><!-- modal body -->
+  <div class="modal-footer">
+    <%= link_to "Annuler", "#", class: "btn btn-secondary tx-mont tx-medium tx-11 tx-uppercase pd-y-12 pd-x-25 tx-spacing-1", data: {dismiss: "modal"} %>
+    <%= form.submit "Enregistrer", class: "btn btn-primary tx-mont tx-medium tx-11 tx-uppercase pd-y-12 pd-x-25 tx-spacing-1",  "data-loading-text"=>"Loading...", autocomplete: "off" %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+$("ul.errors").html("");
+<% if @gear_type.errors.any? %>
+  <% @gear_type.errors.full_messages.each do |message| %>
+ 
+    $("ul.errors").append($('<div class="c-alert c-alert--danger" > ').html("<%= message.html_safe %> "));
+  <% end %>
+<% else %>
+  $(".gear-types").html("<%= escape_javascript(render 'index') %>");
+  $("#gear-type-modal").modal("hide");
+ 
+<% end %>

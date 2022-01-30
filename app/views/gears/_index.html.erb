@@ -1,0 +1,23 @@
+<% @gears.each do |gear| %>
+      <tr>
+        
+        <td><%= gear.gear_type.name %></td>
+        <td><%= gear.name %></td>
+        <td><%= gear.brand %></td>
+        <td><%= gear.model %></td>
+        <td><%= gear.manufacture_year %></td>
+       <td>
+        <div class="action-buttons">
+            <%= link_to raw('<i class="fa fa-pencil" aria-hidden="true"></i>
+'),  edit_gear_path(gear), title: "Modifier", remote: true %>
+
+
+
+
+<%= link_to raw('<i class="fa fa-trash-o" aria-hidden="true"></i>
+'), gear_delete_path(gear), remote: true, title: "Supprimer", class: "delete" %>
+</div>
+</td>
+        
+      </tr>
+    <% end %>

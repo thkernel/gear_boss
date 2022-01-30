@@ -1,0 +1,19 @@
+<% @drivers.each do |driver| %>
+  <tr>
+    
+    <td><%= driver.first_name %></td>
+    <td><%= driver.last_name %></td>
+    <td><%= driver.gender %></td>
+    <td>
+        <div class="action-buttons">
+            <%= link_to raw('<i class="fa fa-pencil" aria-hidden="true"></i>
+'),  edit_driver_path(driver), title: "Modifier", remote: true %>
+
+
+
+
+<%= link_to raw('<i class="fa fa-trash-o" aria-hidden="true"></i>
+'), driver_delete_path(driver), remote: true, title: "Supprimer", class: "delete" %>
+</div>
+  </tr>
+<% end %>

@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: rental_items
+#
+#  id         :bigint           not null, primary key
+#  uid        :string
+#  rental_id  :bigint           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: MyString
+  rental: one
+
+two:
+  uid: MyString
+  rental: two
